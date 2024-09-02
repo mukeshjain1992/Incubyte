@@ -30,3 +30,7 @@ def test_add_with_negative_number():
     with pytest.raises(ValueError, match="negative numbers not allowed: -2"):
         calculator.add("1,-2,3")
 
+def test_ignore_numbers_greater_than_1000():
+    calculator = StringCalculator()
+    assert calculator.add("2,1001") == 2
+
