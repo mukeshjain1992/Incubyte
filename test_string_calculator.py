@@ -42,3 +42,10 @@ def test_add_with_any_length_delimiter():
 def test_add_with_multiple_delimiters():
     calculator = StringCalculator()
     assert calculator.add("//[*][%]\n1*2%3") == 6
+
+
+def test_add_with_multiple_longer_delimiters():
+    calculator = StringCalculator()
+    assert calculator.add("//[***][%%%]\n1***2%%%3") == 6
+
+
