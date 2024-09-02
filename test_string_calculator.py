@@ -12,3 +12,7 @@ def test_add_single_number():
 def test_add_two_numbers():
     calculator = StringCalculator()
     assert calculator.add("1,2") == 3
+
+def test_add_multiple_numbers():
+    calculator = StringCalculator()
+    assert calculator.add("1,2,3") == 6
